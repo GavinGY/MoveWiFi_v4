@@ -1,0 +1,3 @@
+wifiÃÜÂë£º12345678
+webÃÜÂë£º123&abc
+rootÃÜÂë£ºroot  123&acb
