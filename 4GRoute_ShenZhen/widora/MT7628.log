@@ -1,0 +1,345 @@
+﻿[04020C0B][04020C0E]
+DDR Calibration DQS reg = 00008886
+
+
+Uboot identify string is mt7628:d218:4.1.2(U-Boot 1.1.3 (May 24 2018 - 14:31:00))
+
+Board: Ralink APSoC DRAM:   8 MB
+relocate_code Pointer at: 807a0000
+Winbond crackid get
+Read flash crackid: 2738432ADF67AC97
+flash manufacture id: ef, device id 40 17
+find flash: W25Q64BV
+============================================ 
+Ralink UBoot Version: 5.0.0.0
+-------------------------------------------- 
+ASIC 7628_MP (Port5<->None)
+DRAM component: 512 Mbits DDR, width 16
+DRAM bus: 16 bit
+Total memory: 64 MBytes
+Flash component: SPI Flash
+Date:May 24 2018  Time:14:31:00
+============================================ 
+icache: sets:512, ways:4, linesz:32 ,total:65536
+dcache: sets:256, ways:4, linesz:32 ,total:32768 
+
+ ##### The CPU freq = 575 MHZ #### 
+ estimate memory size =8 Mbytes
+RESET MT7628 PHY!!!!!!Setting WDT to GPIO
+
+Please choose the operation: 
+   1: Load system code to SDRAM via TFTP. 
+   2: Load system code then write to Flash via TFTP. 
+   3: Boot system code via Flash (default).
+   4: Entr boot command line interface.
+   7: Load Boot Loader code then write to Flash via Serial. 
+   9: Load Boot Loader code then write to Flash via TFTP. 
+default: 3
+ 0 
+mt7628 check the mode
+mt7628 get boot upgrade(38) press(64) 0 time
+Upgrade mode read(38:64:0)
+   
+3: System Boot system code via Flash.
+## Booting image at bc050000 ...
+   Image Name:   OpenWrt Linux-3.10.14-169495
+   Image Type:   MIPS Linux Kernel Image (lzma compressed)
+   Data Size:    1270593 Bytes =  1.2 MB
+   Load Address: 80000000
+   Entry Point:  80000000
+   Verifying Checksum ... OK
+   Uncompressing Kernel Image ... OK
+No initrd
+## Transferring control to Linux (at address 80000000) ...
+## Giving linux memsize in MB, 8
+
+Starting kernel ...
+
+
+LINUX started...
+
+ THIS IS ASIC
+
+SDK 5.0.S.0
+[    0.000000] Linux version 3.10.14 (dimmalex@cmp-server) (gcc version 4.8.3 (OpenWrt/Linaro GCC 4.8-2014.04 r21) ) #1 Mon May 28 22:50:24 CST 2018
+[    0.000000] 
+[    0.000000]  The CPU feqenuce set to 575 MHz
+[    0.000000] CPU0 revision is: 00019655 (MIPS 24KEc)
+[    0.000000] Software DMA cache coherency
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 04000000 @ 00000000 (usable)
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Zone ranges:
+[    0.000000]   Normal   [mem 0x00000000-0x03ffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x00000000-0x03ffffff]
+[    0.000000] Primary instruction cache 64kB, 4-way, VIPT, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 16256
+[    0.000000] Kernel command line: console=ttyS1,57600n8 root=/dev/mtdblock5 rootfstype=squashfs,jffs2 print-fatal-signals=1
+[    0.000000] PID hash table entries: 256 (order: -2, 1024 bytes)
+[    0.000000] Dentry cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Inode-cache hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.000000] Writing ErrCtl register=0004e679
+[    0.000000] Readback ErrCtl register=0004e679
+[    0.000000] Memory: 61020k/65536k available (2796k kernel code, 4516k reserved, 689k data, 224k init, 0k highmem)
+[    0.000000] NR_IRQS:128
+[    0.000000] console [ttyS1] enabled
+[    0.096000] Calibrating delay loop... 382.46 BogoMIPS (lpj=764928)
+[    0.128000] pid_max: default: 32768 minimum: 301
+[    0.132000] Mount-cache hash table entries: 512
+[    0.136000] NET: Registered protocol family 16
+[    0.140000] RALINK_GPIOMODE = 54154444 
+[    0.144000] RALINK_GPIOMODE = 54144444 
+[    0.244000] ***** Xtal 25MHz *****
+[    0.248000] start PCIe register access
+[    0.748000] RALINK_RSTCTRL = 2400000
+[    0.752000] RALINK_CLKCFG1 = fdbfffc0
+[    0.756000] 
+[    0.756000] *************** MT7628 PCIe RC mode *************
+[    1.256000] PCIE0 no card, disable it(RST&CLK)
+[    1.284000] bio: create slab <bio-0> at 0
+[    1.288000] usbcore: registered new interface driver usbfs
+[    1.292000] usbcore: registered new interface driver hub
+[    1.296000] usbcore: registered new device driver usb
+[    1.300000] Switching to clocksource MIPS
+[    1.304000] NET: Registered protocol family 2
+[    1.316000] TCP established hash table entries: 512 (order: 0, 4096 bytes)
+[    1.328000] TCP bind hash table entries: 512 (order: -1, 2048 bytes)
+[    1.340000] TCP: Hash tables configured (established 512 bind 512)
+[    1.352000] TCP: reno registered
+[    1.360000] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    1.372000] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    1.384000] NET: Registered protocol family 1
+[    1.392000] MTK/Ralink EHCI/OHCI init.
+[    1.404000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    1.416000] jffs2: version 2.2. (NAND) (SUMMARY)  (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    1.436000] msgmni has been set to 119
+[    1.444000] io scheduler noop registered (default)
+[    1.460000] Serial: 8250/16550 driver, 2 ports, IRQ sharing disabled
+[    1.476000] serial8250: ttyS0 at MMIO 0x10000d00 (irq = 21) is a 16550A
+[    1.488000] serial8250: ttyS1 at MMIO 0x10000c00 (irq = 20) is a 16550A
+[    1.804000] Ralink gpio driver initialized for v519(b0000060=54144450)
+[    1.816000] Ralink gpio driver initialized(b0000064=0)
+[    1.828000] winbond crackid get
+[    1.832000] fead flash crackid: 2738432ADF67AC97
+[    1.840000] make crackid proc
+[    1.848000] flash manufacture id: ef, device id 40 17
+[    1.856000] W25Q64BV(ef 40170000) (8192 Kbytes)
+[    1.868000] mtd .name = raspi, .size = 0x00800000 (8M) .erasesize = 0x00010000 (64K) .numeraseregions = 0
+[    1.884000] Creating 6 MTD partitions on "raspi":
+[    1.896000] 0x000000000000-0x000000780000 : "ALL"
+[    1.908000] 0x000000000000-0x000000030000 : "Bootloader"
+[    1.920000] 0x000000030000-0x000000040000 : "Config"
+[    1.928000] 0x000000040000-0x000000050000 : "Factory"
+[    1.940000] 0x000000050000-0x000000780000 : "firmware"
+[    1.952000] 0x000000186381-0x000000780000 : "rootfs"
+[    1.964000] mtd: partition "rootfs" must either start or end on erase block boundary or be smaller than an erase block -- forcing read-only
+[    1.988000] mtd: partition "rootfs_data" created automatically, ofs=0x660000, len=0x120000
+[    2.008000] 0x000000660000-0x000000780000 : "rootfs_data"
+[    2.020000] 0x000000780000-0x000000800000 : "Fconfig"
+[    2.032000] GMAC1_MAC_ADRH -- : 0x00008812
+[    2.040000] GMAC1_MAC_ADRL -- : 0x4ed03d2e
+[    2.048000] Ralink APSoC Ethernet Driver Initilization. v3.1  512 rx/tx descriptors allocated, mtu = 1500!
+[    2.064000] GMAC1_MAC_ADRH -- : 0x00008812
+[    2.072000] GMAC1_MAC_ADRL -- : 0x4ed03d2e
+[    2.084000] PROC INIT OK!
+[    2.088000] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    2.100000] ehci-pci: EHCI PCI platform driver
+[    2.112000] ehci-platform: EHCI generic platform driver
+[    2.140000] ******MT7628 mtk phy
+[    2.148000] *****run project phy.
+[    2.160000] FM_OUT value: u4FmOut = 0(0x00000000)
+[    2.176000] FM_OUT value: u4FmOut = 134(0x00000086)
+[    2.184000] FM detection done! loop = 1
+[    2.200000] SR calibration value u1SrCalVal = 6
+[    2.208000] *********Execute mt7628_phy_init!!
+[    2.216000] ehci-platform ehci-platform: EHCI Host Controller
+[    2.228000] ehci-platform ehci-platform: new USB bus registered, assigned bus number 1
+[    2.244000] ehci-platform ehci-platform: irq 18, io mem 0x101c0000
+[    2.268000] ehci-platform ehci-platform: USB 2.0 started, EHCI 1.00
+[    2.280000] hub 1-0:1.0: USB hub found
+[    2.288000] hub 1-0:1.0: 1 port detected
+[    2.296000] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    2.328000] *********Execute mt7628_phy_init!!
+[    2.336000] ohci-platform ohci-platform: Generic Platform OHCI Controller
+[    2.348000] ohci-platform ohci-platform: new USB bus registered, assigned bus number 2
+[    2.364000] ohci-platform ohci-platform: irq 18, io mem 0x101c1000
+[    2.436000] hub 2-0:1.0: USB hub found
+[    2.444000] hub 2-0:1.0: 1 port detected
+[    2.452000] gre: GRE over IPv4 demultiplexor driver
+[    2.460000] TCP: cubic registered
+[    2.468000] NET: Registered protocol family 10
+[    2.476000] NET: Registered protocol family 17
+[    2.488000] 8021q: 802.1Q VLAN Support v1.8
+[    2.496000] registered taskstats version 1
+[    2.512000] VFS: Mounted root (squashfs filesystem) readonly on device 31:5.
+[    2.524000] Freeing unused kernel memory: 224K (80368000 - 803a0000)
+procd: Console is alive
+[    4.820000] CPU 0 Unable to handle kernel paging request at virtual address 30420008, epc == 8009d86c, ra == 8009d8f0
+[    4.840000] Oops[#1]:
+[    4.840000] CPU: 0 PID: 4 Comm: kworker/0:0 Not tainted 3.10.14 #1
+[    4.840000] Workqueue: events cache_reap
+[    4.840000] task: 83c20db8 ti: 83c32000 task.ti: 83c32000
+[    4.840000] $ 0   : 00000000 00000001 30420008 fffedfbd
+[    4.840000] $ 4   : 83c01a00 3c058000 00000000 00000000
+[    4.840000] $ 8   : 83c2fa00 83c0f024 83c2f800 83c2f900
+[    4.840000] $12   : 00005000 fffffffc 00000000 00410000
+[    4.840000] $16   : 83c01a00 83c08500 80350000 8035e390
+[    4.840000] $20   : 80360000 8035d6e4 00000005 80360000
+[    4.840000] $24   : 00000000 8000d1cc                  
+[    4.840000] $28   : 83c32000 83c33e30 80358120 8009d8f0
+[    4.840000] Hi    : 0000000b
+[    4.840000] Lo    : 00000002
+[    4.840000] epc   : 8009d86c cache_reap+0x68/0x144
+[    4.840000]     Not tainted
+[    4.840000] ra    : 8009d8f0 cache_reap+0xec/0x144
+[    4.840000] Status: 1100ff03 KERNEL EXL IE 
+[    4.840000] Cause : 00800008
+[    4.840000] BadVA : 30420008
+[    4.840000] PrId  : 00019655 (MIPS 24KEc)
+[    4.840000] Modules linked in:
+[    4.840000] Process kworker/0:0 (pid: 4, threadinfo=83c32000, task=83c20db8, tls=00000000)
+[    4.840000] Stack : 803589b0 800506b4 803589b0 8004df00 83c27e80 8035e390 80358110 80360000
+          81082300 00000000 00000000 8003fa7c 803589b0 83c20de8 803589b0 83c21b68
+          00000000 83c8fa00 83c27e80 83c27e80 80358110 83c27e98 80360000 00000001
+          80307398 00000001 80360000 800409c8 00000000 00000001 83c27e80 803a0000
+          80300000 80040724 83c23db8 83c27e80 803a0000 80300000 80040724 803589b0
+          ...
+[    4.840000] Call Trace:
+[    4.840000] [<8009d86c>] cache_reap+0x68/0x144
+[    4.840000] [<8003fa7c>] process_one_work+0x26c/0x3e0
+[    4.840000] [<800409c8>] worker_thread+0x2a4/0x42c
+[    4.840000] [<80045eec>] kthread+0xb0/0xb8
+[    4.840000] [<8000b758>] ret_from_kernel_thread+0x14/0x1c
+[    4.840000] 
+[    4.840000] 
+Code: 02002021  8e020050  8e050054 <8c510000> 00003021  0c027591  00003821  8e437c08  8e22002c 
+[    5.188000] ---[ end trace 04dc33de12529b7c ]---
+[    5.196000] CPU 0 Unable to handle kernel paging request at virtual address 00000024, epc == 802b6cdc, ra == 8009d3ac
+[    5.196000] Oops[#2]:
+[    5.196000] CPU: 0 PID: 4 Comm: kworker/0:0 Tainted: G      D      3.10.14 #1
+[    5.196000] task: 83c20db8 ti: 83c32000 task.ti: 83c32000
+[    5.196000] $ 0   : 00000000 00000001 00000000 00000000
+[    5.196000] $ 4   : 83c01d00 8fb10024 00000000 83c257e0
+[    5.196000] $ 8   : 00000010 80145640 83c257e8 0000001a
+[    5.196000] $12   : 00000014 0000000e 00000007 00000001
+[    5.196000] $16   : 00000000 83c34c80 8fb10024 00010000
+[    5.196000] $20   : 803a0000 80350000 00000000 83c25700
+[    5.196000] $24   : 802cb6b8 0000000e                  
+[    5.196000] $28   : 83c32000 83c33bb0 83c34c80 8009d3ac
+[    5.196000] Hi    : 001e8480
+[    5.196000] Lo    : 00000061
+[    5.196000] epc   : 802b6cdc cache_flusharray+0x28/0xc0
+[    5.196000]     Tainted: G      D     
+[    5.196000] ra    : 8009d3ac kmem_cache_free+0x88/0xf8
+[    5.196000] Status: 1100ff02 KERNEL EXL 
+[    5.196000] Cause : 00800008
+[    5.196000] BadVA : 00000024
+[    5.196000] PrId  : 00019655 (MIPS 24KEc)
+[    5.196000] Modules linked in:
+[    5.196000] Process kworker/0:0 (pid: 4, threadinfo=83c32000, task=83c20db8, tls=00000000)
+[    5.196000] Stack : 83c33bb8 0000000b 83c26420 00000000 83c2643c 8fb10024 83c34c80 00000000
+          00010000 8009d3ac 83c20db8 00000001 8034a660 00010000 83c20db8 00000001
+          8034a660 8002c05c 00000006 00000001 00000000 00000000 83c33c08 83c33c08
+          83c20db8 00000001 83c20db0 00000001 83c20e94 00000000 00000020 83c21b38
+          00000010 8002c8d8 00030002 80360000 80358120 802b5d58 83c33c48 83c33c48
+          ...
+[    5.196000] Call Trace:
+[    5.196000] [<802b6cdc>] cache_flusharray+0x28/0xc0
+[    5.196000] [<8009d3ac>] kmem_cache_free+0x88/0xf8
+[    5.196000] [<8002c05c>] release_task+0x41c/0x510
+[    5.196000] [<8002c8d8>] do_exit+0x788/0x838
+[    5.196000] [<80010994>] default_cu2_call+0x0/0x4c
+[    5.196000] 
+[    5.196000] 
+Code: 00a09021  8cb00008  8c420000 <8c510024> 12200011  24b30010  8e230000  8e220004  00431023 
+[    5.564000] ---[ end trace 04dc33de12529b7d ]---
+[    5.572000] Fixing recursive fault but reboot is needed!
+[    5.584000] CPU 0 Unable to handle kernel paging request at virtual address fffffff0, epc == 80046118, ra == 80040c34
+[    5.584000] Oops[#3]:
+[    5.584000] CPU: 0 PID: 4 Comm: kworker/0:0 Tainted: G      D      3.10.14 #1
+[    5.584000] task: 83c20db8 ti: 83c32000 task.ti: 83c32000
+[    5.584000] $ 0   : 00000000 00000015 00000000 00000000
+[    5.584000] $ 4   : 83c20db8 00000000 803589b0 00000000
+[    5.584000] $ 8   : e5bf4834 00000000 00000000 746f6f62
+[    5.584000] $12   : 00000000 000000bc 00000000 00000050
+[    5.584000] $16   : 00000000 0000000b 80360000 803589b0
+[    5.584000] $20   : 803589b0 803589b0 00030002 83c25700
+[    5.584000] $24   : 00000003 80050d8c                  
+[    5.584000] $28   : 83c32000 83c33960 83c20f10 80040c34
+[    5.584000] Hi    : 00000001
+[    5.584000] Lo    : 4cd51400
+[    5.584000] epc   : 80046118 kthread_data+0x4/0xc
+[    5.584000]     Tainted: G      D     
+[    5.584000] ra    : 80040c34 wq_worker_sleeping+0x14/0xf4
+[    5.584000] Status: 1100ff02 KERNEL EXL 
+[    5.584000] Cause : 80800008
+[    5.584000] BadVA : fffffff0
+[    5.584000] PrId  : 00019655 (MIPS 24KEc)
+[    5.584000] Modules linked in:
+[    5.584000] Process kworker/0:0 (pid: 4, threadinfo=83c32000, task=83c20db8, tls=00000000)
+[    5.584000] Stack : 0000000b 80360000 803589b0 803589b0 83c20db8 802b9060 00000000 00000000
+          00030002 83c25700 83c34c80 802b5d58 83c20db8 0000000b 0000000b 00000028
+          00000000 00000000 00030002 83c25700 83c34c80 8002c240 00030002 000000bc
+          000000bc 00000000 00030002 83c25700 00000000 8017bd24 803063a8 83c339f4
+          83c33b00 80305040 0000000b 00000028 00000000 00000000 00030002 83c25700
+          ...
+[    5.584000] Call Trace:
+[    5.584000] [<80046118>] kthread_data+0x4/0xc
+[    5.584000] [<80040c34>] wq_worker_sleeping+0x14/0xf4
+[    5.584000] [<802b9060>] __schedule+0x100/0x55c
+[    5.584000] [<8002c240>] do_exit+0xf0/0x838
+[    5.584000] [<80010994>] default_cu2_call+0x0/0x4c
+[    5.584000] 
+[    5.584000] 
+Code: 03e00008  7c420080  8c82012c <03e00008> 8c42fff0  27bdffe0  afbf001c  8c85012c  24060004 
+[    5.948000] Unhandled kernel unaligned access[#4]:
+[    5.948000] CPU: 0 PID: 4 Comm: kworker/0:0 Tainted: G      D      3.10.14 #1
+[    5.948000] task: 83c20db8 ti: 83c32000 task.ti: 83c32000
+[    5.948000] $ 0   : 00000000 00000015 00000000 00000001
+[    5.948000] $ 4   : 83c01f80 83c26420 80067bb0 00000001
+[    5.948000] $ 8   : 00000000 00000fa0 803c9554 0000001a
+[    5.948000] $12   : 00000024 803d0000 803d0000 00000001
+[    5.948000] $16   : 0040f809 83c26420 00000001 803c3f20
+[    5.948000] $20   : 00000001 803c3f44 00000100 80356ef4
+[    5.948000] $24   : 803d0000 803d0000                  
+[    5.948000] $28   : 83c32000 83c33648 80300000 80067b8c
+[    5.948000] Hi    : 000a4ea0
+[    5.948000] Lo    : 700e5722
+[    5.948000] epc   : 8009d390 kmem_cache_free+0x6c/0xf8
+[    5.948000]     Tainted: G      D     
+[    5.948000] ra    : 80067b8c __rcu_process_callbacks+0x9c/0xc0
+[    5.948000] Status: 1100ff02 KERNEL EXL 
+[    5.948000] Cause : 00800010
+[    5.948000] BadVA : 0040f809
+[    5.948000] PrId  : 00019655 (MIPS 24KEc)
+[    5.948000] Modules linked in:
+[    5.948000] Process kworker/0:0 (pid: 4, threadinfo=83c32000, task=83c20db8, tls=00000000)
+[    5.948000] Stack : 00014600 00000001 8034a660 80360000 83c26434 00000000 803c0000 80067b8c
+          80304d2f 803c0000 00000000 8002877c 83c33678 0000000a 0420806c 80067bc4
+          0420806c 803c0000 803c3f20 00000101 0000000a 8002f3ec ffffffff 00000000
+          803a39e8 803c0000 80359564 8006680c fffee0d8 00000009 00000024 0000000b
+          00000000 80305040 0000000b 00000028 00000000 00000000 00030002 83c25700
+          ...
+[    5.948000] Call Trace:
+[    5.948000] [<8009d390>] kmem_cache_free+0x6c/0xf8
+[    5.948000] [<80067b8c>] __rcu_process_callbacks+0x9c/0xc0
+[    5.948000] [<80067bc4>] rcu_process_callbacks+0x14/0x28
+[    5.948000] [<8002f3ec>] __do_softirq+0xe8/0x1cc
+[    5.948000] [<8002f794>] irq_exit+0x54/0x70
+[    5.948000] [<8000b710>] ret_from_irq+0x0/0x4
+[    5.948000] [<80010930>] die+0xac/0x110
+[    5.948000] [<800162d4>] do_page_fault+0x2c4/0x380
+[    5.948000] [<8000b700>] ret_from_exception+0x0/0x10
+[    5.948000] [<80046118>] kthread_data+0x4/0xc
+[    5.948000] [<80040c34>] wq_worker_sleeping+0x14/0xf4
+[    5.948000] [<802b9060>] __schedule+0x100/0x55c
+[    5.948000] [<8002c240>] do_exit+0xf0/0x838
+[    5.948000] [<80010994>] default_cu2_call+0x0/0x4c
+[    5.948000] 
+[    5.948000] 
+Code: 32520001  000000c0  8c900054 <8e030000> 8e020004  0062102b  14400004  3c02803d  0c0adb2d 
+[    6.380000] ---[ end trace 04dc33de12529b7e ]---
+[    6.392000] Kernel panic - not syncing: Fatal exception in interrupt
